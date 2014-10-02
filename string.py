@@ -15,9 +15,16 @@ def odd_rotation(number, word):
 	odd_rotation(2, 'apple') -> 'app'
 	odd_rotation(5, 'cabbage') -> 'geca'
 	"""
-	
+
 	# Add your code here
-	return 
+        
+        #Simple slicing. Remember, str[:n] gives you all letters from 0 to n-1.
+        if number % 2 == 0: #Even
+                return word[:3] 
+        else:
+                #New variable to find the index of the last but second letter.
+                st = len(word) - 2
+                return word[st:] + word[:2]
 
 
 # B. Flip Case
@@ -26,9 +33,9 @@ def flip_case(word):
 	The function takes a word as its argument.
 	Return a word that has all lowercase characters swapped to uppercase and vice versa.
 	"""
-
+        
 	# Add your code here
-	return
+	return word.swapcase()
 
 
 # C. And/Or ?
@@ -39,8 +46,12 @@ def and_or(word):
 	Otherwise, if the word ends with 'r', return the index where the substring 'or' appears. 
 	"""
 
-	# Add your code here
-	return
+        #assumed to return -1 upon an unsuccessful find().
+        if word.startswith('a'):
+                return word.find('and')
+        elif word.endswith('r'):
+                return word.find('or')
+	return -1
 
 
 # D. sin + cos
@@ -54,6 +65,7 @@ def sincos(number):
 	"""
 
 	# Add your code here
+        
 	return
 
 
