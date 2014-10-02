@@ -1,4 +1,4 @@
-CSIPy exercises
+CSIPy solutions
 ===============
 
-Exercises for the Python workshop.
+Solutions for the exercises.
